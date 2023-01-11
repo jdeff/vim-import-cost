@@ -3,11 +3,11 @@ const {
   importCost, cleanup, JAVASCRIPT, TYPESCRIPT,
 } = require('import-cost');
 
-const write = payload => process.nextTick(() => {
+const write = (payload) => process.nextTick(() => {
   process.stdout.write(`${JSON.stringify(payload)}\n`);
 });
 
-const extractPackage = pkg => ({
+const extractPackage = (pkg) => ({
   name: pkg.name,
   line: pkg.line,
   size: typeof pkg.size === 'undefined' ? -1 : pkg.size,
