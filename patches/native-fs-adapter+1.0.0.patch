@@ -1,0 +1,10 @@
+diff --git a/node_modules/native-fs-adapter/index.js b/node_modules/native-fs-adapter/index.js
+index 427e938..22aaebd 100644
+--- a/node_modules/native-fs-adapter/index.js
++++ b/node_modules/native-fs-adapter/index.js
+@@ -93,4 +93,4 @@ class NativeFileSystemAPI {
+   }
+ }
+ 
+-module.exports = NativeFileSystemAPI;
++module.exports = new NativeFileSystemAPI();

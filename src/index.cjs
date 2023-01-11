@@ -1,6 +1,5 @@
-const getStdin = require('get-stdin');
 const {
-  importCost, cleanup, JAVASCRIPT, TYPESCRIPT,
+  importCost, cleanup, Lang,
 } = require('import-cost');
 
 const write = (payload) => process.nextTick(() => {
@@ -15,8 +14,10 @@ const extractPackage = (pkg) => ({
 });
 
 async function start() {
+  const getStdin = (await import('get-stdin')).default;
+
   // Arguments
-  const fileType = process.argv[2].includes('typescript') ? TYPESCRIPT : JAVASCRIPT;
+  const fileType = process.argv[2].includes('typescript') ? Lang.TYPESCRIPT : Lang.JAVASCRIPT;
   const filePath = process.argv[3];
 
   // File contents through stdin
