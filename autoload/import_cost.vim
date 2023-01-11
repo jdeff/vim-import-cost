@@ -1,5 +1,5 @@
 let s:plug = expand("<sfile>:p:h:h")
-let s:script_path = s:plug . '/src/index.js'
+let s:script_path = s:plug . '/src/index.cjs'
 
 " Current running async job
 let s:import_cost_job_id = 0
